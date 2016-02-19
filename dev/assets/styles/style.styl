@@ -1,0 +1,41 @@
+@charset "UTF-8"
+
+// base
+// -----------------------------------------
+@import "base/normalize"
+@import "base/flex-grid-framework"
+
+// configs
+// -----------------------------------------
+cor-principal = #c80280
+
+// layout
+// -----------------------------------------
+@import "layout/header"
+@import "layout/banner"
+@import "layout/footer"
+@import "layout/form"
+
+// global
+// -----------------------------------------
+body
+	background #e3e2e2
+	font-family 'Lato', sans-serif
+
+.row
+	@extend $row
+
+// div, section, article, footer, nav, header, main
+// 	border 1px dashed #4ecb29
+
+// index
+// -----------------------------------------
+.content
+	@extend $col-10
+	@extend $offset-1
+	text-align center
+	padding 60px 0
+
+@media screen and (max-width 635px)
+	.content
+		@extend $col-12

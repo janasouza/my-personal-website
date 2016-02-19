@@ -1,0 +1,60 @@
+// header
+// -----------------------------------------
+.topo
+	background url('../img/background.jpg')
+
+//logo
+.header
+	@extend $col-12
+	text-align center
+
+.img-container
+	@extend $col-12
+	padding 10px 0
+
+.logo-container
+	@extend $col-12
+	padding 10px 0
+
+span
+	color #fff
+
+//menu
+.menu
+	margin-top 30px
+	width 100%
+	display flex
+	@extend $justify-center
+.menu ul
+	list-style none
+	background principal
+	margin 0
+	padding 0
+.menu ul li
+	display inline-block
+.menu ul li a
+	text-decoration none
+	display inline-block
+	padding 8px 40px
+	margin 0 5px
+	color #fff
+	background cor-principal
+	transition opacity .5s
+.menu ul li a:hover
+	opacity .7
+@media screen and (max-width 480px)
+	.logo-container
+		mq-col(12)
+	.menu
+		margin-top 30px
+	.menu ul
+		width 100%
+		margin 0 auto
+		display block
+	.menu li
+		width 100%
+		text-align center
+		display block
+	.menu ul li a
+		width 100%
+		display block
