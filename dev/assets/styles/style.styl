@@ -20,7 +20,7 @@ cor-principal = #c80280
 // -----------------------------------------
 body
 	background #e3e2e2
-	font-family 'Lato', sans-serif
+	font-family: 'PT Sans', sans-serif;
 
 .row
 	@extend $row
@@ -35,7 +35,50 @@ body
 	@extend $offset-1
 	text-align center
 	padding 60px 0
+	@media screen and (max-width 1060px)
+		mq-col(12)
+		mq-offset(0)
 
-@media screen and (max-width 635px)
-	.content
-		@extend $col-12
+.titulo
+	font-size 22px
+	color cor-principal
+
+.linha
+	@extend $col-10
+	@extend $offset-1
+	height 1px
+	background cor-principal
+
+.imagem-post-it
+	@extend $col-3
+	@extend $offset-1
+	margin-top 40px
+	@media screen and (max-width 1060px)
+		mq-col(4)
+		mq-offset(0)
+	@media screen and (max-width 670px)
+		mq-col(5)
+	@media screen and (max-width 580px)
+		mq-col(12)
+		text-align center
+
+.imagem-post-it img
+	width 100%
+	max-width 246px
+
+.content-2
+	@extend $col-7
+	padding 60px 0
+	@media screen and (max-width 1060px)
+		mq-col(8)
+	@media screen and (max-width 670px)
+		mq-col(7)
+	@media screen and (max-width 580px)
+		mq-col(12)
+		text-align center
+
+.link-frase
+	color cor-principal
+
+.link-frase:hover
+	opacity .7
