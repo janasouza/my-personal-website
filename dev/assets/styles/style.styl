@@ -82,3 +82,43 @@ body
 
 .link-frase:hover
 	opacity .7
+
+
+//PROJETOS
+
+.content-project
+	@extend $col-3
+	background #fff
+	border 1px solid cor-principal
+	margin-top 30px
+	margin-bottom 30px
+	@media screen and (max-width 930px)
+		mq-col(4)
+	@media screen and (max-width 690px)
+		mq-col(6)
+
+.content-project img
+	width 100%
+	max-width 350px
+	border-bottom 1px solid #e3e2e2
+
+.content-txt-project
+	padding 10px
+	font-size 14px
+
+.content-txt-project h2
+	font-size 18px
+
+.botao-project
+	width 100%
+	padding 10px
+	background cor-principal
+	text-align center
+
+.botao-project a
+	text-decoration none
+	color #fff
+	transition opacity .5s
+
+.botao-project a:hover
+	opacity .7
