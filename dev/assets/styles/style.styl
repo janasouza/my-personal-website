@@ -34,7 +34,7 @@ body
 	@extend $col-10
 	@extend $offset-1
 	text-align center
-	padding 60px 0
+	padding 40px 0
 	@media screen and (max-width 1060px)
 		mq-col(12)
 		mq-offset(0)
@@ -42,6 +42,17 @@ body
 .titulo
 	font-size 22px
 	color cor-principal
+
+.redes-sociais
+	@extend $col-12
+	text-align center
+
+.redes-sociais img
+	padding 0 10px
+	transition opacity .5s
+
+.redes-sociais img:hover
+	opacity .6
 
 .linha
 	@extend $col-10
