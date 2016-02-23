@@ -1,4 +1,4 @@
-Copyright (c) 2014 Busca Carioca, [Busca Carioca Developers](https://github.com/busca-dev)
+Copyright (c) 2016 Janaina Souza
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
