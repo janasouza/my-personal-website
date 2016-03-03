@@ -92,6 +92,12 @@ body
 .link-frase:hover
 	opacity .7
 
+.paragraph
+	padding 0 20px
+
+@media screen and (max-width 580px)
+	.texto
+		padding 0 20px
 
 //PROJETOS
 
@@ -101,19 +107,25 @@ body
 	border 1px solid cor-principal
 	margin-top 30px
 	margin-bottom 30px
+	text-align center
+	box-shadow 2px 2px 5px rgba(0,0,0,.3)
 	@media screen and (max-width 930px)
 		mq-col(4)
 	@media screen and (max-width 690px)
 		mq-col(6)
+	@media screen and (max-width 445px)
+		mq-col(12)
 
 .content-project img
 	width 100%
 	max-width 350px
 	border-bottom 1px solid #e3e2e2
+	margin 0 auto
 
 .content-txt-project
 	padding 10px
 	font-size 14px
+	text-align left
 
 .content-txt-project h2
 	font-size 18px
