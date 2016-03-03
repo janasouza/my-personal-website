@@ -17,8 +17,8 @@ cor-principal = #c80280
 // global
 // -----------------------------------------
 body
-	background #e3e2e2
-	font-family: 'PT Sans', sans-serif;
+	background-color #e3e2e2
+	font-family 'PT Sans', sans-serif
 
 .row
 	@extend $row
@@ -109,12 +109,16 @@ body
 	margin-bottom 30px
 	text-align center
 	box-shadow 2px 2px 5px rgba(0,0,0,.3)
+	position relative
+	padding-bottom 40px
 	@media screen and (max-width 930px)
 		mq-col(4)
 	@media screen and (max-width 690px)
 		mq-col(6)
 	@media screen and (max-width 445px)
 		mq-col(12)
+		margin-left 10px
+		margin-right 10px
 
 .content-project img
 	width 100%
@@ -135,6 +139,8 @@ body
 	padding 10px
 	background cor-principal
 	text-align center
+	position absolute
+	bottom 0
 
 .botao-project a
 	text-decoration none
