@@ -6,11 +6,30 @@ html(lang="pt-br")
 	head
 		// head requests
 		include ./includes/head-requests.jade
+
+		//Page infos
+		-var title = "Jana Souza - Projetos"
+		-var description = ""
 		
 		// SEO
 		meta(name="keywords" content="")
-		meta(name="description" content="")
-		title Jana Souza - UI Designer
+		meta(name="description" content=description)
+		meta(name="robots" content="index,follow")
+		title= title
+		
+		// Open Graph
+		meta(property="og:type" content="website")
+		meta(property="og:title" content= title)
+		meta(property="og:description" content=description)
+		meta(property="og:url" content="http://janasouza.com.br/")
+		meta(property="og:image" content="http://janasouza.com.br/assets/img/jana-souza.png")
+
+		// Twitter Cards
+		meta(name="twitter:card" content="summary_large_image")
+		meta(name="twitter:title" content= title)
+		meta(name="twitter:description" content=description)
+		meta(name="twitter:url" content="http://janasouza.com.br/")
+		meta(name="twitter:image" content="http://janasouza.com.br/assets/img/jana-souza.png")
 
 	body
 		// header
@@ -29,7 +48,7 @@ html(lang="pt-br")
 		
 		div.row 
 			div.content-project 
-				img(src="assets/img/project-rio-js.png")
+				img(src="assets/img/project-rio-js.png" alt="RioJs website")
 				div.content-txt-project
 					h2 Rio.JS
 					p Rio.JS é o Grupo de Desenvolvedores Javascript do Rio de Janeiro. O grupo foi criado em 8 de junho de 2011 tendo como objetivo compartilhar ideias sobre...
@@ -38,7 +57,7 @@ html(lang="pt-br")
 						|Ver detalhes no Behance	
 						
 			div.content-project 
-				img(src="assets/img/project-meetup-marketing.png")
+				img(src="assets/img/project-meetup-marketing.png" alt="Meetup Marketing Rio website")
 				div.content-txt-project
 					h2 Meetup Marketing
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum feugiat sodales. Fusce dapibus ultrices lorem, sit amet ultricies.
@@ -47,7 +66,7 @@ html(lang="pt-br")
 						|Ver detalhes no Behance
 						
 			div.content-project 
-				img(src="assets/img/project-busca-carioca.png")
+				img(src="assets/img/project-busca-carioca.png" alt="Busca Carioca website")
 				div.content-txt-project
 					h2 Busca Carioca
 					p Um site institucional desenvolvido para a Busca Carioca, que é uma agência de publicidade e marketing onde atuei como UI Designer/Front-end.
@@ -56,7 +75,7 @@ html(lang="pt-br")
 						|Ver detalhes no Behance
 						
 			div.content-project 
-				img(src="assets/img/project-marcando-de-batom.png")
+				img(src="assets/img/project-marcando-de-batom.png" alt="Marcando de batom website")
 				div.content-txt-project
 					h2 Blog Marcando de Batom
 					p O Marcando de Batom é um blog feminino com foco em maquiagem, mas que aborda qualquer assunto relacionado a mulher. Com o objetivo de compartilhar dicas...
@@ -65,12 +84,12 @@ html(lang="pt-br")
 						|Ver detalhes no Behance
 						
 			div.content-project 
-				img(src="assets/img/project-jana-souza.png")
+				img(src="assets/img/project-jana-souza.png" alt="Jana Souza website")
 				div.content-txt-project
 					h2 Site Pessoal
 					p O meu site tem o objetivo de reunir todas as informações sobre a minha vida profissional. Dados, redes sociais e os meus principais projetos. <3
 				div.botao-project
-					a(href="#")
+					a(href="https://www.behance.net/gallery/34647453/Site-pessoal" TARGET="_blank")
 						|Ver detalhes no Behance
 
 		// footer
