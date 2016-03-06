@@ -31,7 +31,7 @@ html(lang="pt-br")
 		meta(name="twitter:url" content="http://janasouza.com.br/")
 		meta(name="twitter:image" content="http://janasouza.com.br/assets/img/jana-souza.png")
 
-	body
+	body(itemscope itemtype="http://schema.org/Person")
 		// header
 		// -----------------------------------------
 		include ./includes/header.jade
@@ -41,7 +41,7 @@ html(lang="pt-br")
 		main.row
 			div.content
 				h1.titulo Sobre mim
-				p.paragraph Olá, meu nome é Janaina Souza, tenho 20 anos e sou User Interface Designer no Rio de Janeiro. Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso. Atualmente estou como freelancer, mas atuei como UI Designer em uma agência de publicidade por 1 ano com desenvolvedores e não vejo a hora de participar de uma equipe novamente. 
+				p.paragraph itemscope itemtype="http://schema.org/Person") Olá, meu nome é <span itemprop="name">Janaina Souza</span>, tenho 20 anos e sou <span itemprop="jobTitle">User Interface Designer</span> no Rio de Janeiro. <span itemprop="description">Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso.</span> Atualmente estou como freelancer, mas atuei como UI Designer em uma agência de publicidade por 1 ano com desenvolvedores e não vejo a hora de participar de uma equipe novamente. 
 				
 				div.row
 					div.redes-sociais
