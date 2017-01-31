@@ -43,10 +43,11 @@ module.exports = function( grunt ) {
       //compile for production
       compile: {
         files: {
-					"prod/index.html": ["dev/index.jade"],
-					"prod/projetos.html": ["dev/projetos.jade"],
-          "prod/contato.html": ["dev/contato.jade"]
-				}
+          "prod/index.html": ["dev/index.jade"]
+        },
+        options: {
+          data: grunt.file.readJSON("projects.json")
+        }
       }
     },
 

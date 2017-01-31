@@ -3,149 +3,181 @@
 // base
 // -----------------------------------------
 @import "base/normalize"
-@import "base/flex-grid-framework"
 
-// configs
+* {
+	box-sizing border-box
+}
+// colors
 // -----------------------------------------
-cor-principal = #c80280
+pitaya = #f56282
+banana = #f0ed4a
+tutti-frutti = #7be3f6
+uva = #b777f3
 
-// layout
-// -----------------------------------------
-@import "layout/header"
-@import "layout/footer"
+border()
+	border 0px dashed #000
 
 // global
 // -----------------------------------------
 body
-	background-color #e3e2e2
-	font-family 'PT Sans', sans-serif
+	background-color #fff
+	font-family 'Quicksand', sans-serif
 
-.row
-	@extend $row
-
-// div, section, article, footer, nav, header, main
-// 	border 1px dashed #4ecb29
-
-// index
-// -----------------------------------------
-.content
-	@extend $col-10
-	@extend $offset-1
-	text-align center
-	padding 40px 0
-	@media screen and (max-width 1060px)
-		mq-col(12)
-		mq-offset(0)
-
-.titulo
-	font-size 22px
-	color cor-principal
-
-.redes-sociais
-	@extend $col-12
-	text-align center
-
-.redes-sociais img
-	padding 0 10px
-	transition opacity .5s
-
-.redes-sociais img:hover
-	opacity .6
-
-.linha
-	@extend $col-10
-	@extend $offset-1
-	height 1px
-	background cor-principal
-
-.imagem-post-it
-	@extend $col-3
-	@extend $offset-1
-	margin-top 40px
-	@media screen and (max-width 1060px)
-		mq-col(4)
-		mq-offset(0)
-	@media screen and (max-width 670px)
-		mq-col(5)
-	@media screen and (max-width 580px)
-		mq-col(12)
-		text-align center
-
-.imagem-post-it img
+.container
+	border()
 	width 100%
-	max-width 246px
-
-.content-2
-	@extend $col-7
-	padding 60px 0
-	@media screen and (max-width 1060px)
-		mq-col(8)
-	@media screen and (max-width 670px)
-		mq-col(7)
-	@media screen and (max-width 580px)
-		mq-col(12)
-		text-align center
-
-.link-frase
-	color cor-principal
-
-.link-frase:hover
-	opacity .7
-
-.paragraph
-	padding 0 20px
-
-@media screen and (max-width 580px)
-	.texto
-		padding 0 20px
-
-//PROJETOS
-
-.content-project
-	@extend $col-3
-	background #fff
-	border 1px solid cor-principal
-	margin-top 30px
-	margin-bottom 30px
-	text-align center
-	box-shadow 2px 2px 5px rgba(0,0,0,.3)
-	position relative
-	padding-bottom 40px
-	@media screen and (max-width 930px)
-		mq-col(4)
-	@media screen and (max-width 690px)
-		mq-col(6)
-	@media screen and (max-width 445px)
-		mq-col(12)
-		margin-left 10px
-		margin-right 10px
-
-.content-project img
-	width 100%
-	max-width 350px
-	border-bottom 1px solid #e3e2e2
+	max-width 900px
 	margin 0 auto
 
-.content-txt-project
-	padding 10px
-	font-size 14px
-	text-align left
+.header
+	display flex
+	align-items center
+	margin-top 30px
 
-.content-txt-project h2
-	font-size 18px
+@media (max-width 480px)
+	.header
+		flex-wrap wrap
+		padding 20px
 
-.botao-project
+.line
 	width 100%
-	padding 10px
-	background cor-principal
+	height 2px
+	background-image linear-gradient( to right, pitaya, banana, tutti-frutti, uva)
+	margin-top 30px
+
+.profile
+	width 100%
+	max-width 250px
+	border-radius 50%
+	margin-right 20px
+
+@media (max-width 480px)
+	.profile
+		margin 0 auto 20px auto
+
+.redes-sociais
+	border()
+	margin-left auto
+	margin-top -40px
+
+@media (max-width 890px)
+	.redes-sociais
+		margin 0
+		position absolute
+		right 20px
+		top 20px
+
+@media (max-width 480px)
+	.redes-sociais
+		margin 0
+		position relative
+		width 100%
+		text-align center
+
+.redes-sociais img
+	width 35px
+	margin 5px
+
+.redes-sociais a
+	transition opacity .3s
+
+.redes-sociais a:hover
+	opacity .7
+
+.sub-heading
+	font-family 'Sacramento', cursive
+	font-size 26px
+	margin 0
+
+.heading-lv2
+	font-family 'Sacramento', cursive
+	font-size 32px
+	margin 20px 0 10px 0
+	padding 0 50px
+
+.paragraph
 	text-align center
+	margin 0
+	padding 0 50px
+
+.cards
+	display flex
+	flex-wrap wrap
+	margin-top 30px
+
+.card
+	border()
+	width calc((100%/3) - 20px)
+	margin 10px
+	background-color #f9f3f4
+	position relative
+	padding-bottom 40px
+
+@media (max-width 700px)
+	.card
+		width calc((100%/2) - 40px)
+		margin 20px
+
+@media (max-width 480px)
+	.card
+		width calc((100%/1) - 80px)
+		margin 40px
+
+.card img
+	width 100%
+	margin-bottom 10px
+
+.card h3
+	font-family 'Sacramento', cursive
+	font-size 32px
+	margin 10px 0
+	text-align center
+	width 100%
+
+.card p
+	margin 10px 0
+	padding 0 10px
+	width 100%
+
+// .card-btn
+.card-btn a
+	display block
+	width 100%
+	text-align center
+	padding 10px
+	z-index: 2;
+	color #fff
+	text-decoration none
+	transition opacity .3s
 	position absolute
 	bottom 0
 
-.botao-project a
-	text-decoration none
-	color #fff
-	transition opacity .5s
-
-.botao-project a:hover
+.card-btn a:hover
 	opacity .7
+
+.pitaya
+	background-color pitaya
+
+.banana
+	background-color banana
+
+.tutti-frutti
+	background-color tutti-frutti
+
+.uva
+	background-color uva
+
+.footer
+	margin-top 30px
+	padding 10px
+	background-color pitaya
+	text-align center
+	color #fff
+
+.footer a
+	color #fff
+	text-decoration none
+	transition opacity .3s
+
+.footer a:hover
+	opacity .6

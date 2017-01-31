@@ -1,0 +1,39 @@
+{
+  "projects":[
+    {
+      "name":"Busca Carioca",
+      "img":"project-busca-carioca.png",
+      "url":"https://www.behance.net/gallery/34147395/Busca-Carioca",
+      "color":"tutti-frutti",
+      "description":"Um site institucional desenvolvido para a Busca Carioca, que é uma agência de publicidade e marketing onde atuei como UI Designer/Front-end."
+    },
+    {
+      "name":"Meetup Marketing",
+      "img":"project-meetup-marketing.png",
+      "url":"https://www.behance.net/gallery/30710831/Meetup-Marketing",
+      "color":"pitaya",
+      "description":"O Primeiro Meetup de Marketing no Rio tem como objetivo reunir os amantes e estudantes de Comunicação, das áreas de Marketing..."
+    },
+    {
+      "name":"Rio.JS",
+      "img":"project-rio-js.png",
+      "url":"https://www.behance.net/gallery/30710287/Blog-RioJS",
+      "color":"banana",
+      "description":"Rio.JS é o Grupo de Desenvolvedores Javascript do Rio de Janeiro. O grupo foi criado em 8 de junho de 2011 tendo como objetivo compartilhar ideias sobre..."
+    },
+    {
+      "name":"Marcando de Batom",
+      "img":"project-marcando-de-batom.png",
+      "url":"https://www.behance.net/gallery/30738579/Blog-Marcando-de-Batom-10",
+      "color":"uva",
+      "description":"O Marcando de Batom é um blog feminino com foco em maquiagem, mas que aborda qualquer assunto relacionado a mulher. Com o objetivo de compartilhar dicas..."
+    },
+    {
+      "name":"Site Pessoal",
+      "img":"project-jana-souza.png",
+      "url":"https://www.behance.net/gallery/34647453/Site-pessoal",
+      "color":"tutti-frutti",
+      "description":"O meu site tem o objetivo de reunir todas as informações sobre a minha vida profissional. Dados, redes sociais e os meus principais projetos. <3"
+    }
+  ]
+}

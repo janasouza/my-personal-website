@@ -4,9 +4,20 @@ html(lang="pt-br")
 	// head
 	// -----------------------------------------
 	head
-		// head requests
-		include ./includes/head-requests.jade
-		
+
+		// basic metas
+		meta(name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0")
+		meta(charset="utf-8")
+
+		// favicons
+		link(rel="icon" href="assets/img/favicon.png" sizes="32x32")
+
+		// CSS
+		link(rel="stylesheet" href="assets/styles/style.min.css")
+
+		// fonts
+		link(href="https://fonts.googleapis.com/css?family=Quicksand|Sacramento" rel="stylesheet")
+
 		//Page infos
 		-var title = "Jana Souza - UI Designer"
 		-var description = "Olá, meu nome é Janaina Souza e sou User Interface Designer no Rio de Janeiro. Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso."
@@ -32,43 +43,61 @@ html(lang="pt-br")
 		meta(name="twitter:image" content="http://janasouza.com.br/assets/img/jana-souza.png")
 
 	body(itemscope itemtype="http://schema.org/Person")
+
 		// header
 		// -----------------------------------------
-		include ./includes/header.jade
+		header.header.container
+			img(src="assets/img/jana-souza.jpg" alt="Jana Souza" itemprop="image" class="profile")
+			div
+				img(src="assets/img/jana-souza-logo.png" alt="Jana Souza logo")
+				p.sub-heading Estudante de Marketing, User Interface Designer
+
+			div.redes-sociais
+				a(href="https://www.behance.net/janasouza" TARGET="_blank") 
+					img(src="assets/img/behance.svg" alt="Behance")
+				a(href="https://github.com/janasouza" TARGET="_blank")
+					img(src="assets/img/github.svg" alt="Github")
+				a(href="https://www.linkedin.com/in/souzajanaina" TARGET="_blank")
+					img(src="assets/img/linkedin.svg" alt="Linkedin")
 
 		// content
 		// -----------------------------------------
-		main.row
-			div.content
-				h1.titulo Sobre mim
-				p(class="paragraph" itemscope itemtype="http://schema.org/Person") Olá, meu nome é <span itemprop="name">Janaina Souza</span>, tenho 20 anos e sou <span itemprop="jobTitle">User Interface Designer</span> no Rio de Janeiro. <span itemprop="description">Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso.</span> Atualmente estou como freelancer, mas atuei como UI Designer em uma agência de publicidade por 1 ano com desenvolvedores e não vejo a hora de participar de uma equipe novamente. 
-				
-				div.row
-					div.redes-sociais
-						a(href="https://www.behance.net/janasouza" TARGET="_blank") 
-							img(src="assets/img/icon-behance.svg" alt="Behance")
-						a(href="https://github.com/janasouza" TARGET="_blank")
-							img(src="assets/img/icon-github.svg" alt="Github")
-						a(href="https://www.linkedin.com/in/souzajanaina" TARGET="_blank")
-							img(src="assets/img/icon-linkedin.svg" alt="Linkedin")
-						a(href="https://twitter.com/_janasouza" TARGET="_blank")
-							img(src="assets/img/icon-twitter.svg" alt="Twitter")
-				
-		div.linha
-		
-		main.row 
-			div.imagem-post-it
-				img(src="assets/img/post-it.png" alt="Blogueira nas horas vagas")
-			div.content-2
-				h1.titulo Mais sobre mim
-				p.texto Desde novinha sempre gostei muito de maquiagem e acompanhava algumas blogueiras até o dia em que decidi criar o meu próprio blog (não faz muito tempo) para compartilhar com outras meninas dicas e novidades do nosso universo. Como designer, planejei toda a identidade visual e o layout do blog. Com a ajuda do meu amigo <a class="link-frase" href="http://afonsopacifer.com" TARGET="_blank">Afonso Pacifer</a>, que cuidou da parte de front e back-end, estamos chegando na versão 2.0 muito mais funcional e com um novo esquema de cores.
-				p.texto Acesse o blog <a class="link-frase"  href="http://marcandodebatom.com/" TARGET="_blank">www.marcandodebatom.com</a> 
+		main.container
+			div.line
+			h2.heading-lv2 About me
+			p.paragraph Olá, meu nome é Janaina Souza, tenho 20 anos e sou User Interface Designer no Rio de Janeiro. Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso. Atualmente estou como freelancer, mas atuei como UI Designer em uma agência de publicidade por 1 ano com desenvolvedores e não vejo a hora de participar de uma equipe novamente.
+
+			div.line
+			h2.heading-lv2  My Projects
+			p.paragraph Confira abaixo alguns dos meus projetos mais recentes. Alguns projetos foram desenvolvidos em equipe onde fui responsável pela interface e a programação ficou a cargo de outros membros do time. Já em outros projetos, cuidei tando do Design quanto do Front-End. Tem algum projeto legal? Vamos trabalhar juntos! Envie um e-mail <b>janasouzadesigner@gmail.com</b>
+
+			div.cards
+				for project in projects
+					div(class="card" itemscope itemtype="http://schema.org/CreativeWork")
+						img(src="assets/img/"+project.img alt=project.name itemprop="image")
+						h3(itemprop="name")=project.name
+						p(itemprop="description")=project.description
+						div.card-btn
+							a(href=project.url TARGET="_blank" itemprop="url" class=project.color)
+								|See on Behance
 
 		// footer
 		// -----------------------------------------
-		include ./includes/footer.jade
+		footer.footer
+			a(href="https://github.com/janasouza/my-personal-website" TARGET="_blank")
+				|Veja mais e contribua com meu site no github
 
 		// bottom requests
 		// -----------------------------------------
-		include ./includes/bottom-requests.jade
-		include ./includes/analytics.html
+		script(src = "assets/scripts/jquery-1.10.2.min.js" type = "text/javascript")
+		script(src = "assets/scripts/scripts.min.js" type = "text/javascript")
+
+		//- <script>
+		//-   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		//-   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		//-   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		//-   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		//- 
+		//-   ga('create', 'UA-74694930-1', 'auto');
+		//-   ga('send', 'pageview');
+		//- </script>
