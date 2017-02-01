@@ -90,7 +90,7 @@ module.exports = function( grunt ) {
       server: {
         options: {
           port: 9000,
-          base: "prod/",
+          base: "./",
           hostname: "localhost",
           livereload: true,
           open: true

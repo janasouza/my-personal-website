@@ -42,30 +42,34 @@ html(lang="pt-br")
 		meta(name="twitter:url" content="http://janasouza.com.br/")
 		meta(name="twitter:image" content="http://janasouza.com.br/assets/img/jana-souza.png")
 
+		// Webcomponents
+		link(rel="import" href="../bower_components/made-with-heart/made-with-heart.html")
+		link(rel="import" href="custom-style.html")
+
 	body(itemscope itemtype="http://schema.org/Person")
 
 		// header
 		// -----------------------------------------
 		header.header.container
 			img(src="assets/img/jana-souza.jpg" alt="Jana Souza" itemprop="image" class="profile")
-			div
+			div.jana
 				img(src="assets/img/jana-souza-logo.png" alt="Jana Souza logo")
 				p.sub-heading Estudante de Marketing, User Interface Designer
 
 			div.redes-sociais
 				a(href="https://www.behance.net/janasouza" TARGET="_blank") 
-					img(src="assets/img/behance.svg" alt="Behance")
+					include includes/behance.html
 				a(href="https://github.com/janasouza" TARGET="_blank")
-					img(src="assets/img/github.svg" alt="Github")
+					include includes/github.html
 				a(href="https://www.linkedin.com/in/souzajanaina" TARGET="_blank")
-					img(src="assets/img/linkedin.svg" alt="Linkedin")
+					include includes/linkedin.html
 
 		// content
 		// -----------------------------------------
 		main.container
 			div.line
 			h2.heading-lv2 About me
-			p.paragraph Olá, meu nome é Janaina Souza, tenho 20 anos e sou User Interface Designer no Rio de Janeiro. Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso. Atualmente estou como freelancer, mas atuei como UI Designer em uma agência de publicidade por 1 ano com desenvolvedores e não vejo a hora de participar de uma equipe novamente.
+			p.paragraph Olá, meu nome é Janaina Souza, tenho 20 anos e sou User Interface Designer no Rio de Janeiro. Eu gosto de ver a influência da web na vida das pessoas e amo fazer parte disso.
 
 			div.line
 			h2.heading-lv2  My Projects
@@ -84,8 +88,7 @@ html(lang="pt-br")
 		// footer
 		// -----------------------------------------
 		footer.footer
-			a(href="https://github.com/janasouza/my-personal-website" TARGET="_blank")
-				|Veja mais e contribua com meu site no github
+			made-with-heart(href="https://github.com/janasouza/my-personal-website") Jana Souza
 
 		// bottom requests
 		// -----------------------------------------

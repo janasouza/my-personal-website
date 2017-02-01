@@ -1,0 +1,20 @@
+{
+  "name": "my-personal-website",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Janaina Souza"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/janasouza/my-personal-website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "made-with-heart": "^0.1.1"
+  }
+}

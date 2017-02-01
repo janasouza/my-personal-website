@@ -15,7 +15,6 @@ tutti-frutti = #7be3f6
 uva = #b777f3
 
 border()
-	border 0px dashed #000
 
 // global
 // -----------------------------------------
@@ -79,15 +78,38 @@ body
 	margin 5px
 
 .redes-sociais a
-	transition opacity .3s
+	text-decoration none
+	padding 5px
 
-.redes-sociais a:hover
-	opacity .7
+.redes-sociais .behance
+	fill uva
+
+.redes-sociais .linkedin
+	fill banana
+
+.redes-sociais svg:hover
+	animation: unicorn 1s ease infinite;
+
+
+	@keyframes unicorn {
+		0% { fill: #f56282;}
+		33% { fill: #f0ed4a;}
+		66% { fill: #7be3f6;}
+		100% { fill: #b777f3;}
+	}
+
+@media (max-width 480px)
+	.jana
+		text-align center
 
 .sub-heading
 	font-family 'Sacramento', cursive
 	font-size 26px
 	margin 0
+
+@media (max-width 480px)
+	.sub-heading
+		text-align center
 
 .heading-lv2
 	font-family 'Sacramento', cursive
@@ -141,19 +163,26 @@ body
 
 // .card-btn
 .card-btn a
-	display block
+	display inline-block
 	width 100%
 	text-align center
 	padding 10px
-	z-index: 2;
 	color #fff
 	text-decoration none
 	transition opacity .3s
 	position absolute
 	bottom 0
+	border 1px solid rgba(0,0,0,.1)
 
 .card-btn a:hover
-	opacity .7
+	background-image linear-gradient(to bottom, transparent, rgba(0,0,0,.1))
+	cursor pointer
+
+.card-btn a:active
+	background-image linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.1))
+
+
+
 
 .pitaya
 	background-color pitaya
